@@ -1,14 +1,13 @@
 import './App.css';
-import { Links } from './components';
+import { Todo } from './components';
 
 function App() {
   return (
-    <div className="container px-5 py-4 h-screen select-none text-white	bg-cover	bg-no-repeat bg-[url('https://res.cloudinary.com/dcugqfvvg/image/upload/v1651130888/andrey-grinkevich-rIDE73mqi2s-unsplash_itinrq.jpg')]">
+    <div className="px-5 py-4 h-screen select-none text-white	bg-cover	bg-no-repeat bg-[url('https://res.cloudinary.com/dcugqfvvg/image/upload/v1651130888/andrey-grinkevich-rIDE73mqi2s-unsplash_itinrq.jpg')]">
       <div className="h-full relative">
         <section className="absolute left-0 top-0">
           <section className="relative">
             <p className="font-semibold text-lg cursor-pointer">Links</p>
-            <Links />
           </section>
         </section>
         <section className="absolute left-0 bottom-0 flex items-center gap-x-3.5">
@@ -21,7 +20,10 @@ function App() {
           </div>
         </section>
         <section className="absolute right-0 bottom-0">
-          <p className="font-semibold text-lg cursor-pointer">Todo</p>
+          <section className="relative">
+            <Todo />
+            <p className="font-semibold text-lg cursor-pointer">Todo</p>
+          </section>
         </section>
         <section className="absolute right-0 top-0 cursor-pointer flex gap-x-7">
           <div className="flex items-center flex-col justify-between">
