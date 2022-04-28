@@ -1,5 +1,5 @@
 import './App.css';
-import { Todo } from './components';
+import { Weather } from './components';
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
         </section>
         <section className="absolute right-0 bottom-0">
           <section className="relative">
-            <Todo />
             <p className="font-semibold text-lg cursor-pointer">Todo</p>
           </section>
         </section>
@@ -32,15 +31,18 @@ function App() {
             </div>
             <p>Add</p>
           </div>
-          <div>
-            <div className="flex gap-2.5 items-center ml-auto w-max">
-              <span class="material-icons-outlined">thunderstorm</span>
-              <h1 className="text-2xl font-bold">
-                34<sup className="text-sm">o</sup>
-              </h1>
+          <section className="relative">
+            <div>
+              <div className="flex gap-2.5 items-center ml-auto w-max">
+                <span class="material-icons-outlined">thunderstorm</span>
+                <h1 className="text-2xl font-bold">
+                  34<sup className="text-sm">o</sup>
+                </h1>
+              </div>
+              <p className="text-right">Delhi, India</p>
             </div>
-            <p className="text-right">Delhi, India</p>
-          </div>
+            <Weather />
+          </section>
         </section>
         <section className="absolute right-2/4 bottom-0 translate-x-2/4">
           <p className="text-xl">
