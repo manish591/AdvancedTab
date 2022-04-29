@@ -1,14 +1,10 @@
 import React from 'react';
-import { TimeWidget, NameWidget, SearchBar } from '../../components';
+import { TimeWidget, NameWidget, SearchBar, Links } from '../../components';
 
 const LandingPage = () => {
   return (
     <div className="h-full relative">
-      <section className="absolute left-0 top-0">
-        <section className="relative">
-          <p className="font-semibold text-lg cursor-pointer">Links</p>
-        </section>
-      </section>
+      <Links />
       <section className="absolute left-0 bottom-0 flex items-center gap-x-3.5">
         <span className="material-icons-outlined opacity-80 cursor-pointer">
           settings
