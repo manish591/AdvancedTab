@@ -1,9 +1,9 @@
 import './App.css';
-import { TimeWidget } from './components';
+import { TimeWidget, NameWidget } from './components';
 
 function App() {
   return (
-    <div className="px-5 py-4 h-screen select-none text-white	bg-cover	bg-no-repeat bg-[url('https://res.cloudinary.com/dcugqfvvg/image/upload/v1651212468/16783837234_8ecdae4f2f_k_ubmcov.jpg')]">
+    <div className="px-5 py-4 h-screen select-none text-white	bg-cover bg-no-repeat bg-[url('https://res.cloudinary.com/dcugqfvvg/image/upload/v1651212468/16783837234_8ecdae4f2f_k_ubmcov.jpg')]">
       <div className="h-full relative">
         <section className="absolute left-0 top-0">
           <section className="relative">
@@ -53,14 +53,7 @@ function App() {
         </section>
         <section className="absolute left-1/2	top-2/4 -translate-x-2/4 -translate-y-1/3 text-center">
           <TimeWidget />
-          <div className="flex items-baseline gap-x-7 justify-center">
-            <h2 className="text-[3.3rem] font-semibold mt-4 tracking-tight">
-              Good Evening, Manish
-            </h2>
-            <span class="material-icons-outlined hover:backdrop-blur-3xl p-1 rounded-full cursor-pointer">
-              more_horiz
-            </span>
-          </div>
+          <NameWidget />
           <section className="relative mt-8 w-[40rem] rounded-full">
             <div className="absolute inset-0 bg-neutral-50 z-[-1] rounded-full opacity-60"></div>
             <div className="absolute top-1/2 -left-16 -translate-y-2/4">
