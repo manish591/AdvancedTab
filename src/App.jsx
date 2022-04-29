@@ -3,7 +3,7 @@ import { TimeWidget } from './components';
 
 function App() {
   return (
-    <div className="px-5 py-4 h-screen select-none text-white	bg-cover	bg-no-repeat bg-[url('https://res.cloudinary.com/dcugqfvvg/image/upload/v1651130888/andrey-grinkevich-rIDE73mqi2s-unsplash_itinrq.jpg')]">
+    <div className="px-5 py-4 h-screen select-none text-white	bg-cover	bg-no-repeat bg-[url('https://res.cloudinary.com/dcugqfvvg/image/upload/v1651212468/16783837234_8ecdae4f2f_k_ubmcov.jpg')]">
       <div className="h-full relative">
         <section className="absolute left-0 top-0">
           <section className="relative">
@@ -61,8 +61,8 @@ function App() {
               more_horiz
             </span>
           </div>
-          <section className="relative mt-8 w-[40rem] rounded-full shadow-[0_0_6px_0_rgba(0,0,0,0.3)]">
-            <div className="absolute inset-0 bg-white z-[-1] rounded-full"></div>
+          <section className="relative mt-8 w-[40rem] rounded-full">
+            <div className="absolute inset-0 bg-neutral-50 z-[-1] rounded-full opacity-60"></div>
             <div className="absolute top-1/2 -left-16 -translate-y-2/4">
               <span className="material-icons-outlined hover:backdrop-blur-3xl p-2 rounded-full cursor-pointer">
                 autorenew
@@ -71,7 +71,7 @@ function App() {
             <label htmlFor="search" className="sr-only">
               Search Web
             </label>
-            <section className="flex items-center py-3 px-3 rounded-full backdrop-blur-[300px]">
+            <section className="flex items-center py-3 px-3 rounded-full backdrop-blur-[400px]">
               <span className="material-icons-outlined text-3xl">search</span>
               <input
                 type="text"
