@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 const Links = () => {
   const [isLinksOpen, setIsLinksOpen] = useState(false);
-  const [userLinks, setUserLinks] = useState([]);
+  const [userLinks, setUserLinks] = useState(() => {
+    if (typeof window === 'undefined') {
+      return [];
+    }
+    try {
+      const item = window.localStorage.getItem('linksdata');
+      return item ? JSON.parse(item) : [];
+    } catch (error) {
+      console.log(error);
+      return [];
+    }
+  });
   const [addNewLink, setAddNewLink] = useState(false);
   const [linkData, setLinkData] = useState({
     title: '',
@@ -20,6 +31,10 @@ const Links = () => {
       url: '',
     });
   };
+
+  useEffect(() => {
+    localStorage.setItem('linksdata', JSON.stringify(userLinks));
+  }, [userLinks]);
 
   return (
     <section className="absolute left-0 top-0">
@@ -62,18 +77,19 @@ const Links = () => {
                     </a>
                   </section>
                 </li>
-                {userLinks.map((item) => {
-                  return (
-                    <li key={item.id}>
-                      <a href={item.url} className="flex items-center gap-2">
-                        <span class="material-icons-round text-xl -rotate-90">
-                          expand_circle_down
-                        </span>
-                        <button className="text-sm">{item.title}</button>
-                      </a>
-                    </li>
-                  );
-                })}
+                {userLinks &&
+                  userLinks.map((item) => {
+                    return (
+                      <li key={item.id}>
+                        <a href={item.url} className="flex items-center gap-2">
+                          <span class="material-icons-round text-xl -rotate-90">
+                            expand_circle_down
+                          </span>
+                          <button className="text-sm">{item.title}</button>
+                        </a>
+                      </li>
+                    );
+                  })}
               </ul>
               <div
                 className="opacity-60 mt-2"
