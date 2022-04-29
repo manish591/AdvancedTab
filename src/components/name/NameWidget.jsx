@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const NameWidget = () => {
-  const [isEditingName, setIsEditingName] = useState(true);
-  const [input, setInput] = useState('');
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [input, setInput] = useState(localStorage.getItem('name'));
   return (
     <div className="flex items-baseline gap-x-7 justify-center">
       <div className="flex items-baseline">
