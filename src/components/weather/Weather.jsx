@@ -32,13 +32,15 @@ const Weather = () => {
                 <p className="text-base opacity-60">Clear</p>
               </div>
               <div>
-                <span class="material-icons-outlined hover:bg-gray-200 p-1 rounded-full cursor-pointer">
+                <span className="material-icons-outlined hover:bg-gray-200 p-1 rounded-full cursor-pointer">
                   more_horiz
                 </span>
               </div>
             </section>
             <section className="flex items-center gap-5">
-              <span class="material-icons-outlined text-4xl">thunderstorm</span>
+              <span className="material-icons-outlined text-4xl">
+                thunderstorm
+              </span>
               <h1 className="text-7xl">
                 29<sup>o</sup>
               </h1>
@@ -47,7 +49,7 @@ const Weather = () => {
               <div className="flex items-center gap-8">
                 <article className="flex flex-col gap-px items-center">
                   <p>THU</p>
-                  <span class="material-icons-outlined text-base">
+                  <span className="material-icons-outlined text-base">
                     wb_sunny
                   </span>
                   <div>

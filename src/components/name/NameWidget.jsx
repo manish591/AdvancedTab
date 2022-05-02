@@ -32,7 +32,7 @@ const NameWidget = () => {
       </div>
       <div className="relative">
         <span
-          class="material-icons-outlined hover:backdrop-blur-3xl p-1 rounded-full cursor-pointer"
+          className="material-icons-outlined hover:backdrop-blur-3xl p-1 rounded-full cursor-pointer"
           onClick={() => {
             setIsEditingName((en) => !en);
           }}
