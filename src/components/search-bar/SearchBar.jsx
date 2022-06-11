@@ -20,7 +20,7 @@ const SearchBar = () => {
         <section className="flex items-center py-3 px-3 rounded-full backdrop-blur-[400px]">
           <span className="material-icons-outlined text-3xl">search</span>
           <input
-            autocomplete="off"
+            autoComplete="off"
             type="text"
             id="search"
             name="q"
